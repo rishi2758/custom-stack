@@ -2,9 +2,9 @@ package com.lld;
 
 public interface ILinkedList<T> {
     
-    T addFirst(T data);
+    void addFirst(T data);
 
-    T addLast(T data);
+    void addLast(T data);
 
     boolean isEmpty();
 
