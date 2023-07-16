@@ -74,7 +74,7 @@ public class CustomLinkedListTests
              try {
                 ll.removeFirst();
             } catch (IllegalCallerException e) {
-                assertSame(e.getMessage(), "linked-list is empty");
+                assertSame("linked-list is empty", e.getMessage());
                 break;
             }
         }
