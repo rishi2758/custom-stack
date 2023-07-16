@@ -1,4 +1,4 @@
-package com.lld;
+package com.lld.linkedlist;
 
 public interface ILinkedList<T> {
     

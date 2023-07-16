@@ -1,4 +1,4 @@
-package com.lld;
+package com.lld.linkedlist;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

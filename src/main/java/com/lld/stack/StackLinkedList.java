@@ -1,4 +1,7 @@
-package com.lld;
+package com.lld.stack;
+
+import com.lld.linkedlist.CustomLinkedList;
+import com.lld.linkedlist.ILinkedList;
 
 public class StackLinkedList<T> implements Stack<T> {
 
