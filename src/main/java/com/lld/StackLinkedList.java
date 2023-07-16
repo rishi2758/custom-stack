@@ -1,13 +1,11 @@
 package com.lld;
 
-import java.util.*;
-
 public class StackLinkedList<T> implements Stack<T> {
 
-    private final LinkedList<T> list;
+    private final ILinkedList<T> list;
 
     public StackLinkedList() {
-        this.list = new LinkedList<>();
+        this.list = new CustomLinkedList<>();
     }
 
     @Override
