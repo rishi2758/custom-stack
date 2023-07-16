@@ -3,6 +3,8 @@ package com.lld.linkedlist;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import lombok.Data;
+
 public class CustomLinkedList<T> implements ILinkedList<T>, Iterable<T> {
 
     private Node<T> head;
@@ -38,7 +40,7 @@ public class CustomLinkedList<T> implements ILinkedList<T>, Iterable<T> {
 
     @Override
     public boolean isEmpty() {
-        return head.backRef == tail.frontRef;
+        return head == null && tail == null;
     }
 
     @Override
@@ -81,7 +83,8 @@ public class CustomLinkedList<T> implements ILinkedList<T>, Iterable<T> {
         return tail.data;
     }
 
-    private static class Node<T> {
+    @Data
+    public static class Node<T> {
         
         private T data;
         private Node<T> backRef;
@@ -122,6 +125,22 @@ public class CustomLinkedList<T> implements ILinkedList<T>, Iterable<T> {
             throw new NoSuchElementException("empty collection");
         }
 
+    }
+
+    @Override
+    public Node<T> getFirstNode() {
+        if(isEmpty()) {
+            throw new IllegalCallerException("linked-list is empty");
+        }
+        return this.head;
+    }
+
+    @Override
+    public Node<T> getLastNode() {
+        if(isEmpty()) {
+            throw new IllegalCallerException("linked-list is empty");
+        }
+        return this.tail;
     }
  
 }

@@ -1,4 +1,4 @@
-package com.lld;
+package com.lld.stack;
 
 public interface Stack<T> {
 
