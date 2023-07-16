@@ -1,9 +1,7 @@
 package com.lld.cache;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
 import lombok.AllArgsConstructor;
 
 public class LRUCacheTests {
